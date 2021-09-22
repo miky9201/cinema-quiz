@@ -1,9 +1,12 @@
 import React from 'react'
 
-const AnswerButton = ({ buttonType }) => {
+const AnswerButton = ({ buttonType, setResponse }) => {
+
+      const handleClick = () => buttonType === "yes" ? setResponse(true) : setResponse(false)
+
       return (
             <div>
-                  <button>{ buttonType }</button>
+                  <button onClick={handleClick}>{ buttonType }</button>
             </div>
       )
 }
