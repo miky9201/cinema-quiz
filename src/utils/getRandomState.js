@@ -1,0 +1,1 @@
+export const getRandomState= (setState) => setState(Math.random() < 0.5)
